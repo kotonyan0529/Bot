@@ -99,7 +99,7 @@ async def on_message(message):
         await message.channel.send(m)
     
     if  "せやろ" in msg:
-        if "せやろ" === msg:
+        if "せやろか" === msg:
             return
         # メッセージを書きます
         m =  "せやな"
