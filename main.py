@@ -99,6 +99,8 @@ async def on_message(message):
         await message.channel.send(m)
     
     if  "せやろ" in msg:
+        if "せやろ" === msg:
+            return
         # メッセージを書きます
         m =  "せやな"
         # メッセージが送られてきたチャンネルへメッセージを送ります
@@ -158,7 +160,7 @@ async def on_message(message):
         # メッセージが送られてきたチャンネルへメッセージを送ります
         await message.channel.send(m)
 
-    if  "せやろか" in msg:
+    if  "せやろか" == msg:
             if message.guild.voice_client is None:
                 await message.channel.send("せやかて")
                 return
