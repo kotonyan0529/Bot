@@ -99,8 +99,15 @@ async def on_message(message):
         await message.channel.send(m)
     
     if  "せやろ" in msg:
-        if "せやろか" == msg:
-            return
+        if  "せやろか" == msg:
+                if message.guild.voice_client is None:
+                    await message.channel.send("せやかて")
+                    return
+
+                await message.channel.send('せやな・・・')
+                await message.guild.voice_client.disconnect()
+                vc = None
+                return
         # メッセージを書きます
         m =  "せやな"
         # メッセージが送られてきたチャンネルへメッセージを送ります
@@ -160,15 +167,7 @@ async def on_message(message):
         # メッセージが送られてきたチャンネルへメッセージを送ります
         await message.channel.send(m)
 
-    if  "せやろか" == msg:
-            if message.guild.voice_client is None:
-                await message.channel.send("せやかて")
-                return
 
-            await message.channel.send('せやな・・・')
-            await message.guild.voice_client.disconnect()
-            vc = None
-            return
 
 
 #リアクションが付いたときにsummer
