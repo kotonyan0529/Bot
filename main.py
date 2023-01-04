@@ -142,7 +142,7 @@ async def on_message(message):
         vc.play(discord.FFmpegPCMAudio(kudo_rondom[0][0]))
         return
     
-     if  "もろたで" in msg:
+    if  "もろたで" in msg:
         # メッセージを書きます
         m =  "工藤"
         # メッセージが送られてきたチャンネルへメッセージを送ります
@@ -191,7 +191,7 @@ async def on_message(message):
         vc.play(discord.FFmpegPCMAudio('nandeyanen.mp3'))
         return  
 
-     if  "なんでやねん" in msg:
+    if  "なんでやねん" in msg:
         # メッセージを書きます
         m =  "どないやねん"
         # メッセージが送られてきたチャンネルへメッセージを送ります
