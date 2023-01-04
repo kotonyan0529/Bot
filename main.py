@@ -140,8 +140,32 @@ async def on_message(message):
         await message.channel.send(file=discord.File(kudo_rondom[0][1]))
         #再生
         vc.play(discord.FFmpegPCMAudio(kudo_rondom[0][0]))
-
         return
+    
+     if  "もろたで" in msg:
+        # メッセージを書きます
+        m =  "工藤"
+        # メッセージが送られてきたチャンネルへメッセージを送ります
+        await asyncio.sleep(2)
+        await message.channel.send(m)
+
+        if message.author.voice is None:
+            return
+        if vc == None:
+                vc = await message.author.voice.channel.connect()
+
+        if message.guild.voice_client.is_playing():
+            return
+
+        kudo_rondom  = random.choices(kudo, cum_weights=w1,k=1)
+        print(kudo_rondom)
+        print(kudo_rondom[0][1])
+        await message.channel.send(file=discord.File(kudo_rondom[0][1]))
+        #再生
+        vc.play(discord.FFmpegPCMAudio(kudo_rondom[0][0]))
+        return   
+    
+ 
 
     if  "でんがな" in msg:
         # メッセージを書きます
@@ -155,11 +179,35 @@ async def on_message(message):
         # メッセージが送られてきたチャンネルへメッセージを送ります
         await message.channel.send(m)
 
-    if  "なんでやねん" in msg:
+        if message.author.voice is None:
+            return
+        if vc == None:
+                vc = await message.author.voice.channel.connect()
+
+        if message.guild.voice_client.is_playing():
+            return
+
+        #再生
+        vc.play(discord.FFmpegPCMAudio('nandeyanen.mp3'))
+        return  
+
+     if  "なんでやねん" in msg:
         # メッセージを書きます
         m =  "どないやねん"
         # メッセージが送られてきたチャンネルへメッセージを送ります
         await message.channel.send(m)
+
+        if message.author.voice is None:
+            return
+        if vc == None:
+                vc = await message.author.voice.channel.connect()
+
+        if message.guild.voice_client.is_playing():
+            return
+
+        #再生
+        vc.play(discord.FFmpegPCMAudio('donaiyanen.mp3'))
+        return  
 
     if  "せやねん" in msg:
         # メッセージを書きます
@@ -167,8 +215,17 @@ async def on_message(message):
         # メッセージが送られてきたチャンネルへメッセージを送ります
         await message.channel.send(m)
 
+        if message.author.voice is None:
+            return
+        if vc == None:
+                vc = await message.author.voice.channel.connect()
 
+        if message.guild.voice_client.is_playing():
+            return
 
+        #再生
+        vc.play(discord.FFmpegPCMAudio('seyanenna.mp3'))
+        return  
 
 #リアクションが付いたときにsummer
 @client.event
