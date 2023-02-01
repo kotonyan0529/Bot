@@ -29,6 +29,7 @@ async def on_message(message):
     msg = message.content
     print(msg)
 
+    
 #botは無視
     if message.author.bot:
         return
