@@ -6,6 +6,7 @@ import asyncio
 import random
 from flask import Flask
 
+app = Flask(__name__)
 discord_token = 'MTA1NzcwNzM5Mjg4MTY3NjM1OQ.G13GdP.LdROt1xl0qCp6g3HMde2U8bAs_npE-uC2OJfmQ' # Discordbotのアクセストークンを入力
 
 vc = None
