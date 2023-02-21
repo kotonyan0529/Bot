@@ -4,6 +4,7 @@ encoding="utf-8"
 import discord
 import asyncio
 import random
+from flask import Flask
 
 discord_token = 'MTA1NzcwNzM5Mjg4MTY3NjM1OQ.G13GdP.LdROt1xl0qCp6g3HMde2U8bAs_npE-uC2OJfmQ' # Discordbotのアクセストークンを入力
 
